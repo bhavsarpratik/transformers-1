@@ -28,7 +28,7 @@ from .modeling_bert import BertEmbeddings, BertLayerNorm, BertModel, BertPreTrai
 from .modeling_utils import create_position_ids_from_input_ids
 
 class LabelSmoothingLoss(nn.Module):
-    def __init__(self, classes=3, smoothing=0.2, dim=-1):
+    def __init__(self, classes=3, smoothing=0.1, dim=-1):
         super(LabelSmoothingLoss, self).__init__()
         self.confidence = 1.0 - smoothing
         self.smoothing = smoothing
